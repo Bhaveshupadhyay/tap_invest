@@ -1,16 +1,31 @@
-# tap_invest
+# Flutter Clean Architecture (Bloc) - Tap Invest
 
-Tap Invest
+Screen Recordings: https://drive.google.com/drive/folders/1tUQpeqB5DDexDqaSzJ0078vnw7S0kvRY?usp=share_link
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Folder Structure
+```bash
+lib/
+├── core/
+│   ├── common/
+│   │   ├── widgets/
+│   ├── error/
+│   ├── theme/
+│   └── use_case/
+│   └── utils/
+├── features/
+│   ├── feature/
+│   │   ├── data/
+│   │   │   ├── datasources/
+│   │   │   ├── models/
+│   │   │   └── repositories/
+│   │   ├── domain/
+│   │   │   ├── entities/
+│   │   │   ├── repositories/
+│   │   │   └── usecases/
+│   │   └── presentation/
+│   │       ├── cubit/
+│   │       ├── screens/
+│   │       └── widgets/
+└── main.dart
+``` 
