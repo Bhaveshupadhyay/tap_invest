@@ -34,7 +34,8 @@ lib/
 - Modern UI/UX
 - Search bonds by Issuer Name or ISIN
 - View financial graph
-- Responsive Design: Optimized for mobile phones and tablets.
+- Responsive Design: Optimized for mobile phones and tablets
+- Easy to customize: All themes and colors are defined in the theme folder, making it simple to update or modify the app's look and feel
   
 ## Setup Instructions  
  1. Clone the repo:
@@ -93,7 +94,7 @@ used to display dynamic financial graphs like bar and line charts in the UI
 
 ## flutter_dotenv
 
-used to load environment variables from a .env file for secure and configurable API keys or URLs
+used to load environment variables from a .env file for secure and configurable URLs
 
 ## dio
 
@@ -101,7 +102,7 @@ used as the HTTP client to make API calls with support for interceptors, logging
 
 ## google_fonts
 
-used to apply custom Google Fonts across the app for a clean and modern look
+used to apply the Inter font globally across the app 
 
 
 
