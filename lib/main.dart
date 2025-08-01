@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Tap Invest',
-        theme: AppTheme.light(),
+        theme: AppTheme.dark(),
         home: const Home(),
       ),
     );

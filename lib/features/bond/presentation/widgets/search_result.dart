@@ -33,9 +33,15 @@ class SearchResult extends StatelessWidget {
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(color: AppColors.grey200),
-                image: DecorationImage(
-                  image: NetworkImage(logo,),
-                )
+              color: AppColors.white
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: NetworkImage(logo,),
+                  )
+              ),
             ),
           ),
           Expanded(
