@@ -31,10 +31,12 @@ class SearchResult extends StatelessWidget {
             height: 50.w,
             padding: EdgeInsets.all(5.r),
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: AppColors.grey200),
+                shape: BoxShape.circle,
+                border: Border.all(color: AppColors.grey200),
+                image: DecorationImage(
+                  image: NetworkImage(logo,),
+                )
             ),
-            child: Image.network(logo),
           ),
           Expanded(
             child: Column(
@@ -98,17 +100,6 @@ class SearchResult extends StatelessWidget {
     );
   }
 
-  Color? _getTextBgColor(String text){
-    if(searchTerm!=null && searchTerm!.isNotEmpty){
-      final searchTermsArray = searchTerm!.toLowerCase().split(' ');
-      return searchTermsArray.any((term)=>
-          text.toLowerCase().contains(term)
-      )?
-      AppColors.amber600.withValues(alpha: 0.16) : null;
-    }
-    return null;
-  }
-
   Widget highlightText({required String fullText,
     String? highlight,
     required TextStyle? defaultTextStyle}) {
@@ -116,7 +107,7 @@ class SearchResult extends StatelessWidget {
     if(highlight==null) {
       return Text(fullText,style: defaultTextStyle,);
     }
-    int startIndex = -1, endIndex=-1;
+    int startIndex = -1;
     List<TextSpan> textSpan=[];
     final highlightedArray= highlight.split(RegExp(r'\s+'));
     // print('highlighted search: $highlightedArray');

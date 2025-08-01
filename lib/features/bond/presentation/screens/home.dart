@@ -26,6 +26,7 @@ class _HomeState extends State<Home> {
     super.initState();
     context.read<BondCubit>().getAllBonds();
   }
+
   @override
   Widget build(BuildContext context) {
     final theme= Theme.of(context);
@@ -59,7 +60,7 @@ class _HomeState extends State<Home> {
               ),
               SizedBox(height: 25.h,),
 
-              Expanded(
+              Flexible(
                 child: BlocBuilder<BondCubit,BondState>(
                   builder: (context,state){
                     if(state is BondStateLoading){
@@ -69,12 +70,13 @@ class _HomeState extends State<Home> {
                       final bondItems= state.bond;
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(_searchController.text.isNotEmpty? 'SEARCH RESULTS':'SUGGESTED RESULTS',
                             style: theme.textTheme.headlineSmall,
                           ),
                           SizedBox(height: 10.h,),
-                          Expanded(
+                          Flexible(
                             child: Container(
                               // height: (50.w+12.h+20.h)*itemCount,
                               padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 15.w),

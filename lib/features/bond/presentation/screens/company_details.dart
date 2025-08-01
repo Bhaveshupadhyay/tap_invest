@@ -47,7 +47,7 @@ class _CompanyDetailsState extends State<CompanyDetails> {
                     color: AppColors.white,
                     elevation: 1,
                     child: IconButton(
-                      icon: SvgPicture.asset('assets/images/ic_arrow_left.svg',),
+                      icon: SvgPicture.asset('assets/images/ic_arrow_left.svg',height: 18.w,),
                       onPressed: () {
                         Navigator.pop(context);
                       },

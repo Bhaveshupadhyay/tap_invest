@@ -6,59 +6,62 @@ import 'app_color.dart';
 
 class AppTheme{
 
-  static ThemeData dark()=>
+  static ThemeData dark() =>
       ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: AppColors.black,
+        scaffoldBackgroundColor: AppColors.grey900,
+        primaryColor: AppColors.black,
         textTheme: TextTheme(
-            titleSmall: GoogleFonts.inter(
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w500,
-                color: AppColors.white
-            ),
-            titleMedium: GoogleFonts.inter(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w600,
-                color: AppColors.white
-            ),
+          titleSmall: GoogleFonts.inter(
+            fontSize: 10.sp,
+            fontWeight: FontWeight.w500,
+            color: AppColors.grey300,
+          ),
+          titleMedium: GoogleFonts.inter(
+            fontSize: 12.sp,
+            fontWeight: FontWeight.w500,
+            color: AppColors.grey100,
+          ),
           titleLarge: GoogleFonts.inter(
-                fontSize: 45.sp,
-                fontWeight: FontWeight.w500,
-              color: AppColors.white
-            ),
+            fontSize: 14.sp,
+            fontWeight: FontWeight.w500,
+            color: AppColors.grey100,
+          ),
           headlineSmall: GoogleFonts.inter(
-            fontSize: 26.sp,
-              fontWeight: FontWeight.w600,
-              color: AppColors.white
+            fontSize: 10.sp,
+            fontWeight: FontWeight.w600,
+            color: AppColors.grey400,
           ),
           headlineMedium: GoogleFonts.inter(
-            fontSize: 30.sp,
-              fontWeight: FontWeight.bold,
-              color: AppColors.white
+            fontSize: 16.sp,
+            fontWeight: FontWeight.w600,
+            color: AppColors.white,
+          ),
+          headlineLarge: GoogleFonts.inter(
+            fontSize: 26.sp,
+            fontWeight: FontWeight.w600,
+            color: AppColors.white,
           ),
           bodySmall: GoogleFonts.inter(
-              fontSize: 15.sp,
-              color: AppColors.white
+            fontSize: 10.sp,
+            fontWeight: FontWeight.w400,
+            color: AppColors.grey400,
           ),
           bodyMedium: GoogleFonts.inter(
-              fontSize: 18.sp,
-              color: AppColors.white
+            fontSize: 12.sp,
+            fontWeight: FontWeight.w400,
+            color: AppColors.grey300,
           ),
-
-        ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          unselectedItemColor: AppColors.white,
-          selectedItemColor: AppColors.primaryColor,
-          showUnselectedLabels: false,
-          showSelectedLabels: false
+          labelSmall: GoogleFonts.inter(
+            fontSize: 12.sp,
+            fontWeight: FontWeight.w500,
+            color: AppColors.blue300,
+          ),
         ),
         iconTheme: IconThemeData(
-          color: AppColors.primaryColor
+          color: AppColors.grey300,
         ),
-        bottomSheetTheme: BottomSheetThemeData(
-          backgroundColor: Colors.grey.shade900,
-
-        )
       );
+
 
   static ThemeData light()=>
       ThemeData.light().copyWith(
